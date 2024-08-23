@@ -1,11 +1,11 @@
 const http = require('http');
-const config = require('./config');
+const config = require('./apiconfig');
 
 // API
 const options = {
     hostname: config.API_HOST,
     path: config.API_BUS_ARRIVAL_PATH,
-    headers: {"accountKey" : config.LTA_TOKEN},
+    headers: {"accountKey" : process.env.LTA_TOKEN},
     method: "GET",
 };
 

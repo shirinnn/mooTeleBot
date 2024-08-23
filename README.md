@@ -8,6 +8,9 @@ command: npm init
 Install Node Telegram Bot Library
 command: npm install node-telegram-bot-api
 
+Run the bot
+command: node --env-file=.env bot.js
+
 To Safely Merge into main branch:
 - Usual Approach while developing
 git checkout master

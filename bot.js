@@ -1,11 +1,12 @@
 
 // importing packages
 const TelegramBot = require('node-telegram-bot-api');
-const config = require('./config');
+//const config = require('./config');
 const checkBus = require('./bus');
 
 // Init Bot, polling true to fetch new updates
-const bot = new TelegramBot(config.TELE_BOT_TOKEN, {polling: true});
+console.log(process.env.TELE_BOT_TOKEN);
+const bot = new TelegramBot(process.env.TELE_BOT_TOKEN, {polling: true});
 
 bot.on('message', (msg) => {
     const chatId = msg.chat.id;
